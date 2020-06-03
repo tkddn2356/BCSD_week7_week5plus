@@ -1,7 +1,7 @@
 package com.sangwookim.controller;
 
 import com.sangwookim.beans.StudentBean;
-import com.sangwookim.service.StudentService;
+import com.sangwookim.service.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class RestController {
 
     @Autowired
-    private StudentService studentService;
+    private StudentServiceImpl studentService;
 
 
 
@@ -22,7 +22,7 @@ public class RestController {
     @ResponseBody
     public ResponseEntity<ArrayList<StudentBean>> list() {
 
-        ArrayList<StudentBean> list = studentService.getStudentsInfo();
+        ArrayList<StudentBean> list = studentService.getStudentList();
 
         ResponseEntity<ArrayList<StudentBean>> entry = new ResponseEntity<ArrayList<StudentBean>>(list, HttpStatus.OK);
 
@@ -47,7 +47,7 @@ public class RestController {
     public ResponseEntity<StudentBean> register(@PathVariable("name") String name,
                                                 @RequestBody StudentBean student) {
 
-        int result = studentService.addStudentInfo(student);
+        studentService.addStudentInfo(student);
 
         ResponseEntity<StudentBean> entry = new ResponseEntity<StudentBean>(student, HttpStatus.OK);
 
@@ -59,7 +59,7 @@ public class RestController {
     public ResponseEntity<StudentBean> delete(@PathVariable("name") String name,
                                               @RequestBody StudentBean student) {
 
-        int result = studentService.deleteStudentInfo(student);
+        studentService.deleteStudentInfo(student);
 
         ResponseEntity<StudentBean> entry = new ResponseEntity<StudentBean>(student, HttpStatus.OK);
 
@@ -72,7 +72,7 @@ public class RestController {
     public ResponseEntity<StudentBean> modify(@PathVariable("name") String name,
                                               @RequestBody StudentBean student) {
 
-        int result = studentService.updateStudentInfo(student);
+        studentService.modifyStudentInfo(student);
 
         ResponseEntity<StudentBean> entry = new ResponseEntity<StudentBean>(student, HttpStatus.OK);
 

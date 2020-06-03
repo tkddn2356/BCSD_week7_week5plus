@@ -10,7 +10,10 @@
      주로 Bean을 정의할 때 사용된다.-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/applicationContext.xml</param-value>
+        <param-value>
+            /WEB-INF/applicationContext.xml
+            classpath*:common/*.xml
+        </param-value>
     </context-param>
     <!-- 리스너설정, 스프링 설정 정보를 읽는다.-->
     <listener>

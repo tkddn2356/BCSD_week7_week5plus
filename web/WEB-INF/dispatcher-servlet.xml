@@ -11,8 +11,9 @@
 
     <!-- 스캔할 bean들이 모여있는 패키지를 지정한다. -->
     <context:component-scan base-package="com.sangwookim.controller"/>
-    <context:component-scan base-package="com.sangwookim.dao"/>
+<!--    <context:component-scan base-package="com.sangwookim.dao"/>-->
     <context:component-scan base-package="com.sangwookim.service"/>
+    <context:component-scan base-package="com.sangwookim.repository"/>
 
 
 
