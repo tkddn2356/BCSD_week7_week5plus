@@ -31,8 +31,7 @@ public class RestController {
 
     @RequestMapping(value = "/students/{name}", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseEntity<StudentBean> read(@PathVariable("name") String name,
-                                            StudentBean student) {
+    public ResponseEntity<StudentBean> read(StudentBean student) {
 
 
         StudentBean studentInfo = studentService.getStudentInfo(student);
