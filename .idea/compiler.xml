@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="BCSD_week7_week5plus" />
         <module name="spring0508" />
         <module name="BCSD_week5_mybatis" />
       </profile>

@@ -39,6 +39,7 @@ public class RestController {
         ResponseEntity<StudentBean> entry = new ResponseEntity<StudentBean>(studentInfo, HttpStatus.OK);
 
         return entry;
+        //databinding
     }
 
 
