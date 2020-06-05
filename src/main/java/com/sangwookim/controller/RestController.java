@@ -34,6 +34,7 @@ public class RestController {
     public ResponseEntity<StudentBean> read(@PathVariable("name") String name,
                                             StudentBean student) {
 
+
         StudentBean studentInfo = studentService.getStudentInfo(student);
 
         ResponseEntity<StudentBean> entry = new ResponseEntity<StudentBean>(studentInfo, HttpStatus.OK);

@@ -15,7 +15,6 @@ public class MainController {
     }
 
 
-
     @RequestMapping(value = "/rest/REST_TEST", method = RequestMethod.GET)
     public String test() {
         return "rest/REST_TEST";
